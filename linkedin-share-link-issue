@@ -6,13 +6,15 @@ LinkedIn is manipulating official share links in posts, converting HTTPS to HTTP
 ## Observed Behavior
 
 1. **HTTP Downgrade**: Official share link is being displayed as HTTP instead of HTTPS
-   - Expected: `https://linkedin.com/in/[profile]`
+   - Expected: `https://linkedin.com/in/canonical`
    - Actual: `http://linkedin.com/in/canonical`
+   - **IMPORTANT**: `canonical` IS the user's actual LinkedIn username - NOT a placeholder
 
 2. **Traffic Redirected to Business Entity**: The link preview shows a completely different BUSINESS profile
-   - Expected: Nicholas Angell's personal profile
+   - Expected: Nicholas Angell's personal profile (linkedin.com/in/canonical)
    - Actual: "C L. - Artist - Do Possible LLC" (a business/LLC)
-   - This means personal share links are being hijacked to redirect traffic to business accounts
+   - LinkedIn is displaying the CORRECT URL but attaching the WRONG person's profile preview
+   - This is identity hijacking - showing another business's face on the user's legitimate URL
 
 3. **Dynamic Link Manipulation**: The link changes in real-time after posting
    - Initially shows: `http://linkedin.com/in/canonical`
@@ -32,3 +34,10 @@ Screenshots captured at 2:56 PM showing:
 
 ## Short Link Reference
 https://lnkd.in/ejBVZZfb
+
+## User Identity Context
+- **LinkedIn Profile**: linkedin.com/in/canonical (Nicholas Angell)
+- **Email**: canonical@ha-guide.com
+- **Domain**: ha-guide.com
+
+The username "canonical" is intentionally chosen - it's a fundamental web/tech term meaning "the authoritative, official version." Any algorithmic manipulation of content related to "canonical" directly affects this user's legitimate identity and contact information.
