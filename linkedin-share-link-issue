@@ -1,0 +1,33 @@
+# LinkedIn Share Link Issue - January 2026
+
+## Summary
+LinkedIn is manipulating official share links in posts, converting HTTPS to HTTP and displaying incorrect profile URLs.
+
+## Observed Behavior
+
+1. **HTTP Downgrade**: Official share link is being displayed as HTTP instead of HTTPS
+   - Expected: `https://linkedin.com/in/[profile]`
+   - Actual: `http://linkedin.com/in/canonical`
+
+2. **Wrong Profile Display**: The link preview shows a completely different person's profile
+   - Expected: Nicholas Angell's profile
+   - Actual: "C L. - Artist - Do Possible LLC"
+
+3. **Dynamic Link Manipulation**: The link changes in real-time after posting
+   - Initially shows: `http://linkedin.com/in/canonical`
+   - Later changes to: `https://lnkd.in/ejBVZZfb`
+
+## Evidence
+Screenshots captured at 2:56 PM showing:
+- Post composition with incorrect canonical URL
+- Saved post displaying HTTP link
+- Link preview showing wrong user profile
+
+## Hashtags Used in Original Post
+- #TopVoices
+- #LinkedInSupport
+- #LinkedIn
+- #Legal
+
+## Short Link Reference
+https://lnkd.in/ejBVZZfb
